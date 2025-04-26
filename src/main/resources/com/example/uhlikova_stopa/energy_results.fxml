@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="25" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.uhlikova_stopa.controllers.EnergyResultsController" styleClass="root">
+
+    <Label text="Výsledky - Energetika" styleClass="heading" />
+
+    <HBox alignment="CENTER" spacing="30">
+        <Label text="Celkové emise:" styleClass="input-label" />
+        <Label fx:id="totalEmissionsLabel" text="-" styleClass="result-label" />
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="30">
+        <Label text="Emise na obyvatele:" styleClass="input-label" />
+        <Label fx:id="perCapitaEmissionsLabel" text="-" styleClass="result-label" />
+    </HBox>
+
+    <Label text="Porovnání emisí dle zdrojů energie" styleClass="chart-title" />
+
+    <BarChart fx:id="comparisonBarChart" prefWidth="850" prefHeight="450" >
+        <xAxis>
+            <CategoryAxis fx:id="barChartXAxis" label="Zdroj energie" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="barChartYAxis" label="t CO₂ na obyvatele" />
+        </yAxis>
+    </BarChart>
+
+    <Label text="Doporučení" styleClass="chart-title" />
+    <TextArea fx:id="recommendationsArea" wrapText="true" prefWidth="700" prefHeight="220" editable="false" styleClass="text-field"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Zpět na menu" onAction="#handleBackToMenu" styleClass="button" />
+        <Button text="Pokračovat na dopravu" onAction="#handleNextSection" styleClass="button" />
+    </HBox>
+
+</VBox>

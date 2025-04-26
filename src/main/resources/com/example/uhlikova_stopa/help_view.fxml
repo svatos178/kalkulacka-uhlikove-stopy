@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.uhlikova_stopa.controllers.HelpController"
+      alignment="TOP_CENTER" spacing="20" styleClass="root" >
+
+    <Label text="NÁPOVĚDA K POUŽITÍ APLIKACE" styleClass="heading" />
+
+    <VBox spacing="10" prefWidth="800"  alignment="CENTER">
+        <Label text="Zadávaná data" styleClass="subheading"/>
+        <Label wrapText="true" styleClass="paragraph" text="- Všechna data se zadávají za celý kalendářní rok."/>
+        <Label wrapText="true" styleClass="paragraph" text="- Data jsou za celou obec nebo územní celek, nikoli za jednotlivce."/>
+        <Label wrapText="true" styleClass="paragraph" text="- Energetika: zadáváte spotřebu energií v MWh."/>
+        <Label wrapText="true" styleClass="paragraph" text="- Doprava: najeté kilometry podle typu dopravy (auto, autobus, vlak atd.)."/>
+        <Label wrapText="true" styleClass="paragraph" text="- Odpady: množství odpadu v kg podle druhu a způsobu nakládání."/>
+        <Label wrapText="true" styleClass="paragraph" text="- Zemědělství: počty zvířat a množství použitých hnojiv."/>
+
+        <Label text="Zpracování dat" styleClass="subheading"/>
+        <Label wrapText="true" styleClass="paragraph" text="- Výpočet probíhá na základě emisních faktorů přiřazených každému vstupu."/>
+        <Label wrapText="true" styleClass="paragraph" text="- Výsledkem jsou emise CO₂ v tunách a jejich přepočet na obyvatele."/>
+
+        <Label text="Výstupy a export" styleClass="subheading"/>
+        <Label wrapText="true" styleClass="paragraph" text="- Každý sektor obsahuje graf a doporučení na základě vstupních hodnot."/>
+        <Label wrapText="true" styleClass="paragraph" text="- Po vyplnění všech sektorů se zobrazí celkové shrnutí emisí."/>
+        <Label wrapText="true" styleClass="paragraph" text="- Data lze exportovat do formátu JSON (pro analýzu nebo archivaci)."/>
+
+        <Label text="Poznámka" styleClass="subheading"/>
+        <Label wrapText="true" styleClass="paragraph" text="Tato aplikace slouží jako základ pro budoucí rozšiřování."/>
+    </VBox>
+
+    <Button text="Zpět na menu" onAction="#handleBackToMenu" styleClass="button" />
+</VBox>

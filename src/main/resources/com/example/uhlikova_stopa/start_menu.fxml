@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.uhlikova_stopa.controllers.StartMenuController">
+    <Label text="Kalkulačka uhlíkové stopy" styleClass="heading" />
+    <Button text="Začít výpočet" fx:id="startButton" onAction="#handleCalculator" />
+    <Button text="O aplikaci" fx:id="aboutButton" onAction="#handleAbout" />
+    <Button text="Nápověda" fx:id="helpButton" onAction="#handleHelp" />
+</VBox>

@@ -1,0 +1,60 @@
+{
+  "CR": {
+    "population": 10870000,
+    "brown_coal": 393100,
+    "black_coal": 200000,
+    "natural_gas": 64000,
+    "renewables": 116200,
+    "heavy_fuel_oil": 68000,
+    "light_fuel_oil": 52700,
+    "lpg": 30000,
+    "personal_car_petrol_km_per_year": 7000,
+    "personal_car_diesel_km_per_year": 2000,
+    "personal_car_electric_km_per_year": 500,
+    "bus_km_per_year": 1000,
+    "truck_km_per_year": 800,
+    "train_km_per_year": 400,
+
+    "paper_kg_per_capita": 120,
+    "plastic_kg_per_capita": 50,
+    "glass_kg_per_capita": 30,
+    "metal_kg_per_capita": 20,
+    "bio_kg_per_capita": 100,
+    "textile_kg_per_capita": 15,
+
+    "cow_per_capita": 0.15,
+    "sheep_per_capita": 0.05,
+    "pig_per_capita": 0.6,
+    "poultry_per_capita": 2.5,
+    "fertilizer_kg_per_capita": 30
+  },
+  "EU": {
+    "population": 447000000,
+    "brown_coal": 7170000,
+    "black_coal": 5000000,
+    "natural_gas": 3800000,
+    "renewables": 4546000,
+    "heavy_fuel_oil": 2000000,
+    "light_fuel_oil": 1500000,
+    "lpg": 1000000,
+    "personal_car_petrol_km_per_year": 6000,
+    "personal_car_diesel_km_per_year": 2500,
+    "personal_car_electric_km_per_year": 700,
+    "bus_km_per_year": 1200,
+    "truck_km_per_year": 900,
+    "train_km_per_year": 500,
+
+    "paper_kg_per_capita": 130,
+    "plastic_kg_per_capita": 60,
+    "glass_kg_per_capita": 35,
+    "metal_kg_per_capita": 25,
+    "bio_kg_per_capita": 110,
+    "textile_kg_per_capita": 18,
+
+    "cow_per_capita": 0.2,
+    "sheep_per_capita": 0.1,
+    "pig_per_capita": 0.5,
+    "poultry_per_capita": 2.0,
+    "fertilizer_kg_per_capita": 25
+  }
+}

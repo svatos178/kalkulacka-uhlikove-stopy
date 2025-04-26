@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.uhlikova_stopa.controllers.TravelResultsController"
+      alignment="CENTER" spacing="25" styleClass="root">
+
+    <Label text="Výsledky - Doprava" styleClass="heading"/>
+
+    <HBox alignment="CENTER" spacing="30">
+        <Label text="Celkové emise:" styleClass="input-label"/>
+        <Label fx:id="totalEmissionsLabel" text="-" styleClass="result-label"/>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="30">
+        <Label text="Emise na obyvatele:" styleClass="input-label"/>
+        <Label fx:id="perCapitaEmissionsLabel" text="-" styleClass="result-label"/>
+    </HBox>
+
+    <Label text="Porovnání emisí dle typu dopravy" styleClass="chart-title"/>
+
+    <BarChart fx:id="comparisonBarChart" prefWidth="850" prefHeight="450" styleClass="chart">
+        <xAxis>
+            <CategoryAxis fx:id="barChartXAxis" label="Typ dopravy"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="barChartYAxis" label="t CO₂ na obyvatele"/>
+        </yAxis>
+    </BarChart>
+
+    <Label text="Doporučení" styleClass="chart-title"/>
+    <TextArea fx:id="recommendationsArea" wrapText="true" prefWidth="700" prefHeight="220" editable="false" styleClass="text-field"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Zpět na menu" onAction="#handleBackToMenu" styleClass="button"/>
+        <Button text="Pokračovat na odpady" onAction="#handleNextSection" styleClass="button"/>
+    </HBox>
+
+</VBox>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.chart.PieChart?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.uhlikova_stopa.controllers.TravelController"
+      alignment="CENTER" spacing="25" styleClass="root">
+
+    <Label text="Kalkulačka uhlíkové stopy - Doprava" styleClass="heading" />
+
+    <GridPane hgap="20" vgap="15" alignment="CENTER" styleClass="grid-pane">
+
+        <Label text="Kilometry osobních aut (benzín):" styleClass="input-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="personalCarPetrolInput" promptText="Zadejte km/rok" styleClass="text-field" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Kilometry osobních aut (nafta):" styleClass="input-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="personalCarDieselInput" promptText="Zadejte km/rok" styleClass="text-field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Kilometry osobních aut (elektro):" styleClass="input-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="personalCarElectricInput" promptText="Zadejte km/rok" styleClass="text-field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Kilometry autobusů:" styleClass="input-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="busInput" promptText="Zadejte km/rok" styleClass="text-field" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Kilometry nákladních vozidel:" styleClass="input-label" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="truckInput" promptText="Zadejte km/rok" styleClass="text-field" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Kilometry vlaků:" styleClass="input-label" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="trainInput" promptText="Zadejte km/rok" styleClass="text-field" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+    </GridPane>
+    <Label text="Rozdělení podle kategorií:" styleClass="chart-title"/>
+    <PieChart fx:id="travelChart" prefWidth="400" prefHeight="300" />
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Zpět na menu" onAction="#handleBackToMenu" styleClass="button"/>
+        <Button text="Pokračovat" onAction="#handleCalculate" styleClass="button"/>
+    </HBox>
+
+</VBox>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.uhlikova_stopa.controllers.AgricultureResultsController" alignment="CENTER" spacing="20" styleClass="root">
+
+    <Label text="Výsledky - Zemědělství a chov" styleClass="heading" />
+
+    <HBox spacing="20" alignment="CENTER">
+        <Label text="Celkové emise:"  />
+        <Label fx:id="totalEmissionsLabel" text="-" styleClass="result-label" />
+    </HBox>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Label text="Emise na obyvatele:" />
+        <Label fx:id="perCapitaEmissionsLabel" text="-" styleClass="result-label" />
+    </HBox>
+
+    <Label text="Porovnání kategorií:" styleClass="chart-title" />
+    <BarChart fx:id="comparisonBarChart" prefWidth="600" prefHeight="400">
+        <xAxis>
+            <CategoryAxis fx:id="barChartXAxis" label="Kategorie zemědělství"/>
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="barChartYAxis" label="t CO₂ na obyvatele"/>
+        </yAxis>
+    </BarChart>
+
+    <Label text="Doporučení" styleClass="chart-title" />
+    <TextArea fx:id="recommendationsArea" wrapText="true" prefWidth="600" prefHeight="200" editable="false" />
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Zpět na menu" onAction="#handleBackToMenu" styleClass="button" />
+        <Button text="Pokračovat na shrnutí" onAction="#handleNextSection" styleClass="button" />
+    </HBox>
+
+</VBox>

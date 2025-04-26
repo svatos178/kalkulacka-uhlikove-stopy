@@ -1,0 +1,59 @@
+{
+  "energy": {
+    "brown_coal": 0.364,
+    "black_coal": 0.341,
+    "natural_gas": 0.202,
+    "heavy_fuel_oil": 0.279,
+    "light_fuel_oil": 0.267,
+    "lpg": 0.237,
+    "renewables": 0.001
+  }, "travel": {
+  "personal_car_petrol": 0.192,
+  "personal_car_diesel": 0.171,
+  "personal_car_electric": 0.045,
+  "bus": 0.035,
+  "truck": 0.300,
+  "train": 0.025
+},
+  "waste": {
+    "paper": {
+      "recycle": -0.13,
+      "incineration": -0.21,
+      "landfill": 1.04
+    },
+    "plastic": {
+      "recycle": -0.6,
+      "incineration": 1.6,
+      "landfill": 0.01
+    },
+    "glass": {
+      "recycle": -0.33,
+      "incineration": 0.008,
+      "landfill": 0.009
+    },
+    "metal": {
+      "recycle": -1.1,
+      "incineration": 0.02,
+      "landfill": 0.01
+    },
+    "bio": {
+      "recycle": -0.06,
+      "incineration": -0.07,
+      "landfill": 0.6
+    },
+    "textile": {
+      "recycle": -14.3,
+      "incineration": 0.44,
+      "landfill": 0.45
+    }
+  },
+  "agriculture": {
+    "cow_enteric": 3.3,
+    "cow_manure": 0.6,
+    "sheep_enteric": 0.8,
+    "sheep_manure": 0.1,
+    "pig_manure": 0.42,
+    "poultry_manure": 0.03,
+    "synthetic_fertilizer_n2o": 4.2
+  }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.uhlikova_stopa.controllers.AboutAppController"
+      alignment="TOP_CENTER" spacing="20" styleClass="root">
+
+    <Label text="O APLIKACI" styleClass="heading" />
+
+    <VBox spacing="10" prefWidth="800" alignment="CENTER">
+        <Label text="Účel aplikace" styleClass="subheading"/>
+        <Label wrapText="true" text="Tato aplikace vznikla jako součást bakalářské práce. Slouží jako výchozí nástroj pro výpočet uhlíkové stopy na úrovni municipality." styleClass="paragraph"/>
+
+        <Label text="Funkce a sběr dat" styleClass="subheading"/>
+        <Label wrapText="true" text="Aplikace umožňuje uživateli zadat údaje o spotřebě paliv, dopravě, odpadech a zemědělství. Všechny vstupy jsou přehledně rozděleny do jednotlivých sektorů." styleClass="paragraph"/>
+
+        <Label text="Výpočet emisí" styleClass="subheading"/>
+        <Label wrapText="true" text="Na základě emisních faktorů dochází k automatickému výpočtu celkových i přepočtených emisí CO₂ na obyvatele. Emisní faktory jsou uloženy v souboru emission_factors.json" styleClass="paragraph"/>
+
+        <Label text="Výstupy a rozšiřitelnost" styleClass="subheading"/>
+        <Label wrapText="true" text="Výsledky jsou vizualizovány pomocí grafů. K dispozici je export dat do formátu JSON. Aplikace je připravena pro budoucí rozšíření o nové sektory, benchmarking a datové analýzy." styleClass="paragraph"/>
+    </VBox>
+
+    <Button text="Zpět na menu" onAction="#handleBackToMenu" styleClass="button" />
+
+</VBox>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.PieChart?>
+
+<VBox alignment="CENTER" spacing="20" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.uhlikova_stopa.controllers.WasteController">
+
+    <Label text="Kalkulačka uhlíkové stopy - Odpady" styleClass="heading"/>
+
+    <GridPane hgap="40" vgap="10" alignment="CENTER">
+
+        <GridPane GridPane.columnIndex="0" hgap="5" vgap="5">
+            <Label text="Papír" styleClass="input-label" GridPane.rowIndex="0" GridPane.columnSpan="2" />
+            <Label text="Recyklace:" styleClass="unit-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="paperRecycleInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="1" GridPane.columnIndex="1">
+
+            </TextField>
+            <Label text="Skládkování:" styleClass="unit-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="paperLandfillInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="2" GridPane.columnIndex="1">
+
+            </TextField>
+            <Label text="Spalování:" styleClass="unit-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="paperIncinerationInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="3" GridPane.columnIndex="1">
+
+            </TextField>
+        </GridPane>
+
+        <GridPane GridPane.columnIndex="1" hgap="5" vgap="5">
+            <Label text="Plasty" styleClass="input-label" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+            <Label text="Recyklace:" styleClass="unit-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="plasticRecycleInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Skládkování:" styleClass="unit-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="plasticLandfillInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="Spalování:" styleClass="unit-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="plasticIncinerationInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <GridPane GridPane.columnIndex="2" hgap="5" vgap="5">
+            <Label text="Sklo" styleClass="input-label" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+            <Label text="Recyklace:" styleClass="unit-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="glassRecycleInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Skládkování:" styleClass="unit-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="glassLandfillInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="Spalování:" styleClass="unit-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="glassIncinerationInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+    </GridPane>
+
+    <GridPane hgap="40" vgap="10" alignment="CENTER">
+        <!-- Druhý řádek: Kovy, Bioodpad, Textil -->
+        <GridPane GridPane.columnIndex="0" hgap="5" vgap="5">
+            <Label text="Kovy" styleClass="input-label" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+            <Label text="Recyklace:" styleClass="unit-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="metalRecycleInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Skládkování:" styleClass="unit-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="metalLandfillInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="Spalování:" styleClass="unit-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="metalIncinerationInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <GridPane GridPane.columnIndex="1" hgap="5" vgap="5">
+            <Label text="Bioodpad" styleClass="input-label" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+            <Label text="Recyklace:" styleClass="unit-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="bioRecycleInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Skládkování:" styleClass="unit-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="bioLandfillInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="Spalování:" styleClass="unit-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="bioIncinerationInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <GridPane GridPane.columnIndex="2" hgap="5" vgap="5">
+            <Label text="Textil" styleClass="input-label" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+            <Label text="Recyklace:" styleClass="unit-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="textileRecycleInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="Skládkování:" styleClass="unit-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="textileLandfillInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="Spalování:" styleClass="unit-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="textileIncinerationInput" promptText="kg" styleClass="text-field" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+    </GridPane>
+
+    <Label text="Rozdělení emisí podle typu odpadu:" styleClass="chart-title"/>
+    <PieChart fx:id="wasteChart" prefWidth="400" prefHeight="300"/>
+
+    <Label text="Poznámka: Kategorie se nezobrazí, pokud je jejich emisní bilance záporná (např. díky efektu recyklace)."  wrapText="true" />
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Zpět na menu" onAction="#handleBackToMenu"/>
+        <Button text="Pokračovat" onAction="#handleCalculate"/>
+    </HBox>
+
+</VBox>

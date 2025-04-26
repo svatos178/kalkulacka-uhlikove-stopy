@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.uhlikova_stopa.controllers.SummaryController"
+      alignment="TOP_CENTER" spacing="20" styleClass="root">
+
+
+    <Label text="Shrnutí uhlíkové stopy" styleClass="heading" />
+
+
+    <HBox spacing="10" alignment="CENTER">
+
+        <Label fx:id="totalEmissionsLabel" text="-" styleClass="result-label" />
+    </HBox>
+    <HBox spacing="10" alignment="CENTER">
+
+        <Label fx:id="totalMunicipalityLabel" text="-" styleClass="result-label" />
+    </HBox>
+
+
+
+    <Label text="Rozdělení emisí podle sektorů" styleClass="chart-title" />
+    <PieChart fx:id="sectorShareChart" prefWidth="400" prefHeight="300" />
+
+
+    <HBox spacing="40" alignment="CENTER">
+        <BarChart fx:id="sectorBarChart" prefWidth="450" prefHeight="300">
+            <xAxis>
+                <CategoryAxis fx:id="barChartXAxis" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis fx:id="barChartYAxis" />
+            </yAxis>
+        </BarChart>
+
+        <VBox spacing="10" prefWidth="350">
+            <Label text="Interpretace výsledků" styleClass="subheading" />
+            <TextArea fx:id="sectorInterpretationArea" wrapText="true" editable="false" prefHeight="300" styleClass="text-field" />
+        </VBox>
+    </HBox>
+
+
+    <Label text="Doporučení" styleClass="chart-title" />
+    <TextArea fx:id="recommendationsArea" wrapText="true" editable="false" prefWidth="800" prefHeight="220" styleClass="text-field" />
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Zpět na menu" onAction="#handleBackToMenu" styleClass="button" />
+        <Button text="Exportovat do JSONU" onAction="#handleExportJson" styleClass="button" />
+
+    </HBox>
+
+</VBox>
